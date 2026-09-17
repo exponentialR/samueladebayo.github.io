@@ -8,6 +8,11 @@
   <meta name="robots" content="noindex,follow" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    try {
+      localStorage.setItem('sa-research-updates-popup-suppress-until', String(Date.now() + 365 * 24 * 60 * 60 * 1000));
+    } catch (_) {}
+  </script>
   <script defer src="assets/site.js"></script>
   <style>
     .confirm-main{min-height:calc(100vh - 124px);display:flex;align-items:center;background:#f7f8f6;padding:72px 0}

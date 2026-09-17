@@ -73,6 +73,20 @@
 .news-page .newsletter-section{background:#f7f8f6;border-top:1px solid var(--line)}
 .news-page .newsletter-panel{max-width:1320px}
 
+/* Research-updates popup: restrained and editorial, not a marketing modal. */
+.research-popup-open{overflow:hidden}
+.research-popup-overlay[hidden]{display:none!important}
+.research-popup-overlay{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:28px;background:rgba(20,34,54,.46);opacity:0;pointer-events:none;transition:opacity .18s ease}
+.research-popup-overlay.is-open{opacity:1;pointer-events:auto}
+.research-popup{position:relative;width:min(620px,calc(100vw - 40px));background:#fff;border:1px solid var(--line);box-shadow:0 24px 70px rgba(20,34,54,.18);padding:38px 40px 34px}
+.research-popup .section-kicker{margin-bottom:9px}
+.research-popup h2{margin:0 42px 11px 0;font-size:clamp(1.45rem,2.2vw,1.9rem);line-height:1.18}
+.research-popup>p{margin:0 0 22px;max-width:520px;color:var(--muted);font-size:.92rem}
+.research-popup-form{min-height:52px;max-width:540px;overflow:hidden}
+.research-popup-note{margin-top:10px;color:#89939f;font-size:.71rem;line-height:1.45}
+.research-popup-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border:1px solid #d5dcde;background:#fff;color:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;padding:0;font:inherit;font-size:1.15rem;line-height:1;cursor:pointer}
+.research-popup-close:hover,.research-popup-close:focus-visible{border-color:var(--accent);color:var(--accent)}
+
 /* Paired research visuals and other grids should size to their own content. */
 .research-pair{align-items:start}
 .research-pair .research-visual{margin-top:0;margin-bottom:0}
@@ -83,6 +97,7 @@
 
 @media(prefers-reduced-motion:reduce){
   .spotlight-slide{transition:none;transform:none}
+  .research-popup-overlay{transition:none}
 }
 
 @media(min-width:1700px){
@@ -150,4 +165,7 @@
   .newsletter-section{padding:34px 0}
   .newsletter-panel{gap:18px;padding:18px 0}
   .newsletter-form{width:100%;overflow:hidden}
+  .research-popup-overlay{padding:16px;align-items:flex-end}
+  .research-popup{width:100%;padding:30px 22px 26px}
+  .research-popup h2{margin-right:34px}
 }

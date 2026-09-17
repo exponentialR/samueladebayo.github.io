@@ -1,6 +1,6 @@
 const balanceStyles = document.createElement('link');
 balanceStyles.rel = 'stylesheet';
-balanceStyles.href = 'assets/layout-balance.css?v=20260917-3';
+balanceStyles.href = 'assets/layout-balance.css?v=20260917-4';
 document.head.appendChild(balanceStyles);
 
 const toggle = document.querySelector('[data-nav-toggle]');

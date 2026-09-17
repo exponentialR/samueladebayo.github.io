@@ -2,6 +2,12 @@
 .feature,.split,.research-pair,.tool-grid,.cards,.paper-grid,.news-grid{align-items:start}
 .tool-card,.card,.paper-card,.news-card,.research-pair .research-visual{align-self:start;height:auto}
 
+/* Homepage biography: detailed enough to establish trajectory without becoming a CV block. */
+.hero-bio{max-width:980px}
+.hero-bio p{margin:0 0 12px;color:#49576a;font-size:.96rem;line-height:1.66}
+.hero-bio p:first-child{font-size:1rem;color:#405064}
+.hero-bio p:last-child{margin-bottom:0}
+
 /* ARISE feature: editorial split instead of one tall equal-height card. */
 .arise-section .feature{grid-template-columns:minmax(0,1.35fr) minmax(300px,390px);gap:46px;align-items:start;max-width:1480px;background:transparent;border:0}
 .arise-section .feature-copy{padding:8px 0 0;align-self:start}
@@ -17,6 +23,9 @@
 .news-grid{align-items:start}
 
 @media(min-width:1700px){
+  .hero-bio{max-width:1040px}
+  .hero-bio p{font-size:.98rem}
+  .hero-bio p:first-child{font-size:1.02rem}
   .arise-section .feature{grid-template-columns:minmax(0,1.4fr) minmax(320px,420px);gap:52px}
   .arise-section .feature-image.cover-preview img{max-height:420px}
 }
@@ -27,6 +36,7 @@
 }
 
 @media(max-width:960px){
+  .hero-bio{max-width:100%}
   .arise-section .feature{grid-template-columns:1fr;gap:28px}
   .arise-section .feature-copy{padding:0}
   .arise-section .feature-image{justify-self:start;width:min(100%,420px);border:1px solid var(--line)}
@@ -34,6 +44,8 @@
 }
 
 @media(max-width:640px){
+  .hero-bio p{font-size:.92rem;line-height:1.62}
+  .hero-bio p:first-child{font-size:.95rem}
   .arise-section .feature{gap:22px}
   .arise-section .feature-image{width:min(100%,360px);padding:10px}
   .arise-section .feature-image.cover-preview img{max-height:360px}

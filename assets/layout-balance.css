@@ -62,6 +62,17 @@
 .news-entry-links a:hover{text-decoration:underline}
 .news-entry.related{background:linear-gradient(90deg,rgba(11,119,123,.035),transparent 46%)}
 
+/* Research updates signup: site copy around a deliberately minimal Beehiiv form. */
+.newsletter-section{padding:46px 0;background:#fff;border-top:1px solid var(--line)}
+.newsletter-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,560px);gap:72px;align-items:center;max-width:1320px;margin:0 auto;padding:34px 0}
+.newsletter-copy .section-kicker{margin-bottom:8px}
+.newsletter-copy h2{margin:0 0 10px;font-size:clamp(1.45rem,1.8vw,1.8rem)}
+.newsletter-copy p{margin:0;max-width:680px;color:var(--muted);font-size:.92rem}
+.newsletter-form{min-height:52px;display:flex;align-items:center;justify-content:flex-end}
+.newsletter-note{margin-top:9px;color:#89939f;font-size:.72rem;line-height:1.45}
+.news-page .newsletter-section{background:#f7f8f6;border-top:1px solid var(--line)}
+.news-page .newsletter-panel{max-width:1320px}
+
 /* Paired research visuals and other grids should size to their own content. */
 .research-pair{align-items:start}
 .research-pair .research-visual{margin-top:0;margin-bottom:0}
@@ -84,6 +95,7 @@
   .spotlight-slide strong{font-size:1.13rem}
   .arise-section .feature{grid-template-columns:minmax(0,1.4fr) minmax(320px,420px);gap:52px}
   .arise-section .feature-image.cover-preview img{max-height:420px}
+  .newsletter-panel{grid-template-columns:minmax(0,1fr) minmax(500px,620px);max-width:1480px}
 }
 
 @media(max-width:1280px){
@@ -93,6 +105,7 @@
   .arise-section .feature{grid-template-columns:minmax(0,1.15fr) minmax(300px,380px);gap:34px}
   .arise-section .feature-image.cover-preview img{max-height:390px}
   .news-feature,.news-archive{max-width:1120px}
+  .newsletter-panel{max-width:1120px;gap:48px}
 }
 
 @media(max-width:960px){
@@ -112,6 +125,8 @@
   .news-feature{grid-template-columns:minmax(0,1fr) minmax(220px,280px);gap:34px}
   .news-entry{grid-template-columns:105px minmax(0,1fr);gap:18px 24px}
   .news-entry-links{grid-column:2;white-space:normal;padding-top:0}
+  .newsletter-panel{grid-template-columns:1fr;gap:24px;padding:26px 0}
+  .newsletter-form{justify-content:flex-start}
 }
 
 @media(max-width:640px){
@@ -132,4 +147,7 @@
   .news-archive-heading p{margin-top:8px;text-align:left}
   .news-entry{grid-template-columns:1fr;gap:6px;padding:19px 0}
   .news-entry-links{grid-column:auto;margin-top:4px}
+  .newsletter-section{padding:34px 0}
+  .newsletter-panel{gap:18px;padding:18px 0}
+  .newsletter-form{width:100%;overflow:hidden}
 }

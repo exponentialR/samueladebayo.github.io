@@ -1,0 +1,40 @@
+/* Site-wide balance pass: avoid forced equal-height panels and let figures support the text. */
+.feature,.split,.research-pair,.tool-grid,.cards,.paper-grid,.news-grid{align-items:start}
+.tool-card,.card,.paper-card,.news-card,.research-pair .research-visual{align-self:start;height:auto}
+
+/* ARISE feature: editorial split instead of one tall equal-height card. */
+.arise-section .feature{grid-template-columns:minmax(0,1.35fr) minmax(300px,390px);gap:46px;align-items:start;max-width:1480px;background:transparent;border:0}
+.arise-section .feature-copy{padding:8px 0 0;align-self:start}
+.arise-section .feature-image{height:auto;min-height:0;max-height:none;align-self:start;border:1px solid var(--line);padding:12px;background:#fff}
+.arise-section .feature-image.cover-preview img{width:auto;height:auto;max-width:100%;max-height:400px;padding:0}
+
+/* Paired research visuals and other grids should size to their own content. */
+.research-pair{align-items:start}
+.research-pair .research-visual{margin-top:0;margin-bottom:0}
+.tool-grid{align-items:start}
+.cards{align-items:start}
+.paper-grid{align-items:start}
+.news-grid{align-items:start}
+
+@media(min-width:1700px){
+  .arise-section .feature{grid-template-columns:minmax(0,1.4fr) minmax(320px,420px);gap:52px}
+  .arise-section .feature-image.cover-preview img{max-height:420px}
+}
+
+@media(max-width:1280px){
+  .arise-section .feature{grid-template-columns:minmax(0,1.15fr) minmax(300px,380px);gap:34px}
+  .arise-section .feature-image.cover-preview img{max-height:390px}
+}
+
+@media(max-width:960px){
+  .arise-section .feature{grid-template-columns:1fr;gap:28px}
+  .arise-section .feature-copy{padding:0}
+  .arise-section .feature-image{justify-self:start;width:min(100%,420px);border:1px solid var(--line)}
+  .arise-section .feature-image.cover-preview img{max-height:420px}
+}
+
+@media(max-width:640px){
+  .arise-section .feature{gap:22px}
+  .arise-section .feature-image{width:min(100%,360px);padding:10px}
+  .arise-section .feature-image.cover-preview img{max-height:360px}
+}
